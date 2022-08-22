@@ -6,7 +6,7 @@
 /*   By: nmathieu <nmathieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 05:25:48 by nmathieu          #+#    #+#             */
-/*   Updated: 2022/08/22 05:36:44 by nmathieu         ###   ########.fr       */
+/*   Updated: 2022/08/22 05:40:54 by nmathieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,11 @@ void	ft_putchar(char c)
 		tmp ^= src;
 	if (src & 1)
 		src++;
-	write(src & 0x0001, (char *)&tmp + 2, 1);
+	if (write(src & 0x0001, (char *)&tmp + 2, 1) == 0)
+		c = c + 1;
 }
 
+/*
 int	main(void)
 {
 	ft_putchar('H');
@@ -61,3 +63,4 @@ int	main(void)
 	ft_putchar('\n');
 	return (0);
 }
+*/
