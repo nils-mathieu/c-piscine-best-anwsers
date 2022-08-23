@@ -6,7 +6,7 @@
 /*   By: nmathieu <nmathieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 16:46:19 by nmathieu          #+#    #+#             */
-/*   Updated: 2022/08/23 16:54:00 by nmathieu         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:20:01 by nmathieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,10 @@ void	ft_print_alphabet(void)
 	ft_print_alphabet_from(97);
 }
 
+/*
 int	main(void)
 {
 	ft_print_alphabet();
 	return (0);
 }
+*/
