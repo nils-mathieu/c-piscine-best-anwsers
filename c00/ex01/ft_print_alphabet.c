@@ -6,7 +6,7 @@
 /*   By: nmathieu <nmathieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 05:37:46 by nmathieu          #+#    #+#             */
-/*   Updated: 2022/08/22 06:06:32 by nmathieu         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:22:58 by nmathieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,25 @@ static void	ft_putchar(char c)
 		c = c + 1;
 }
 
-inline static int next_letter(char c, char d) {
-   if (!c)
-      return (d);
-   else
-      return next_letter((c & d) << 1, c ^ d);
+inline static int	next_letter(char c, char d)
+{
+	if (!c)
+		return (d);
+	else
+		return (next_letter((c & d) << 1, c ^ d));
+}
+
+static void	ft_strcpy(char *dst, const char *src)
+{
+	while (*src)
+		*(dst++) = *(src++);
 }
 
 void	ft_print_alphabet(void)
 {
-	char	buffer[] = "SALUT";
+	char	buffer[6];
 
+	ft_strcpy(buffer, "SALUT");
 	*(buffer + 5) = 97;
 	while (1)
 	{
